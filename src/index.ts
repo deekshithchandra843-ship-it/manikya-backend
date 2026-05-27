@@ -15,6 +15,7 @@ import analyticsRoutes from './routes/analytics';
 dotenv.config();
 
 const app  = express();
+app.set('trust proxy', 1);  // ← ADD THIS
 const PORT = Number(process.env.PORT) || 4000;
 
 // ── Security & parsing ────────────────────────────────────────

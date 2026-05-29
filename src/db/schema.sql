@@ -102,6 +102,13 @@ CREATE TABLE IF NOT EXISTS contact_leads (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+-- ── Site Settings (key/value store for admin-editable config) ─
+CREATE TABLE IF NOT EXISTS site_settings (
+  key        TEXT PRIMARY KEY,
+  value      TEXT NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 -- ── Default Admin User ────────────────────────────────────────
 -- Password: Manikya@2024 (bcrypt hash)
 INSERT INTO admin_users (email, password_hash, name)

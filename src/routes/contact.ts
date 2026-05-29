@@ -103,10 +103,10 @@ async function sendCustomerConfirmation(lead: {
         For immediate assistance, contact us:
       </p>
       <p style="margin:12px 0 0;font-size:14px">
-        Phone: +91 74116 42999 | +91 74117 42999
+        Phone: +91 74116 47999 | +91 74117 42999
       </p>
       <p style="margin:8px 0 0;font-size:14px">
-        WhatsApp: https://wa.me/917411642999
+        WhatsApp: https://wa.me/917411647999
       </p>
     </div>
     <p style="color:#64748b;font-size:13px;margin:0">

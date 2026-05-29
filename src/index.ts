@@ -4,13 +4,14 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 
-import adminAuthRoutes from './routes/adminAuth';
-import authRoutes      from './routes/auth';
-import contactRoutes   from './routes/contact';
-import servicesRoutes  from './routes/services';
-import galleryRoutes   from './routes/gallery';
-import productsRoutes  from './routes/products';
-import analyticsRoutes from './routes/analytics';
+import adminAuthRoutes   from './routes/adminAuth';
+import authRoutes        from './routes/auth';
+import contactRoutes     from './routes/contact';
+import servicesRoutes    from './routes/services';
+import galleryRoutes     from './routes/gallery';
+import productsRoutes    from './routes/products';
+import analyticsRoutes   from './routes/analytics';
+import socialLinksRoutes from './routes/social-links';
 
 dotenv.config();
 
@@ -46,13 +47,14 @@ app.use('/api/auth', authLimiter);
 app.use('/api/admin', authLimiter);
 
 // ── Routes ────────────────────────────────────────────────────
-app.use('/api/admin',     adminAuthRoutes);
-app.use('/api/auth',      authRoutes);
-app.use('/api/contact',   contactRoutes);
-app.use('/api/services',  servicesRoutes);
-app.use('/api/gallery',   galleryRoutes);
-app.use('/api/products',  productsRoutes);
-app.use('/api/analytics', analyticsRoutes);
+app.use('/api/admin',        adminAuthRoutes);
+app.use('/api/auth',         authRoutes);
+app.use('/api/contact',      contactRoutes);
+app.use('/api/services',     servicesRoutes);
+app.use('/api/gallery',      galleryRoutes);
+app.use('/api/products',     productsRoutes);
+app.use('/api/analytics',    analyticsRoutes);
+app.use('/api/social-links', socialLinksRoutes);
 
 // ── Health check ──────────────────────────────────────────────
 app.get('/api/health', (_req, res) => {

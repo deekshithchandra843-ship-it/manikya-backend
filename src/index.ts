@@ -12,6 +12,7 @@ import galleryRoutes   from './routes/gallery';
 import productsRoutes  from './routes/products';
 import analyticsRoutes from './routes/analytics';
 import videosRoutes    from './routes/videos';
+import socialLinksRoutes from './routes/social-links';
 import { query }       from './db/pool';
 
 dotenv.config();
@@ -71,6 +72,7 @@ app.use('/api/gallery',   galleryRoutes);
 app.use('/api/products',  productsRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/videos',    videosRoutes);
+app.use('/api/social-links', socialLinksRoutes);
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
